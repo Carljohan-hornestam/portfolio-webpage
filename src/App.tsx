@@ -1,6 +1,17 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import axios from "axios";
+import Header from "./components/Header";
+
 const App: React.FC = () => {
-  return <div>test</div>;
+  const [routes, setRoutes] = useState<[]>([]);
+
+  useEffect(() => {
+    axios.get('/data/routes.json').then((res) => {
+      setRoutes(res.data.routes)
+    })
+  }, [])
+
+  return <Header routes={routes}/>;
 };
 
 export default App;

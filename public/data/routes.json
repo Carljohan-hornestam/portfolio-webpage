@@ -1,0 +1,10 @@
+{
+
+"routes": [
+  { "route": "/", "name": "Hem" },
+  { "route": "/about", "name": "Om mig" },
+  { "route": "/projects", "name": "Projekt" },
+  { "route": "/contact", "name": "Kontakt" }
+]
+
+}
