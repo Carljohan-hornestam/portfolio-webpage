@@ -4,10 +4,12 @@ const useStyles = makeStyles((theme) => ({
  
 }));
 
-export default function Projects() {
+const Projects: React.FC = () => {
   const styles = useStyles();
 
   return (
     <div>PROJEKT</div>
   );
 }
+
+export default Projects;

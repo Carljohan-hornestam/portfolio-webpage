@@ -4,10 +4,13 @@ const useStyles = makeStyles((theme) => ({
  
 }));
 
-export default function Contact() {
+const Contact: React.FC = () => {
+
   const styles = useStyles();
 
   return (
     <div>KONTAKTA PÅ MIG</div>
   );
 }
+
+export default Contact;
