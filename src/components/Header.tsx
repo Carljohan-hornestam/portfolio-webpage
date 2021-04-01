@@ -1,11 +1,12 @@
 import { makeStyles, Grid } from "@material-ui/core";
+import Lightspeed from "react-reveal";
 import { NavLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   routesPageContainer: {
     // background: "linear-gradient(to left, #071b24, #0f6c96)"
     background: "#ADEFD1FF",
-    borderBottom: "2px solid #30110d"
+    borderBottom: "2px solid #30110d",
   },
   routesContainer: {
     margin: theme.spacing(2),
@@ -19,10 +20,10 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Averia",
   },
   activeRoute: {
-    color: "#ffff",
+    // color: "#ffff",
     textDecoration: "underline",
-    transition: "0.3s ease-in-out"
-  }
+    transition: "0.3s ease-in-out",
+  },
 }));
 
 interface HeaderProps {
@@ -37,34 +38,33 @@ export default function Header(props: HeaderProps) {
   const styles = useStyles();
 
   return (
-    <Grid
-      container
-      className={styles.routesPageContainer}
-    >
-      <Grid
-        container
-        item
-        xs={12}
-        justify="flex-end"
-        spacing={2}
-        className={styles.routesContainer}
-      >
-        {props.routes.map((route: Route, index: number) => {
-          return (
-            <Grid key={index} item>
-              <NavLink
-                activeClassName={
-                  route.route === "/" ? null : styles.activeRoute
-                }
-                className={styles.route}
-                to={route.route}
-              >
-                {route.name}
-              </NavLink>
-            </Grid>
-          );
-        })}
+    <Lightspeed left>
+      <Grid container className={styles.routesPageContainer}>
+        <Grid
+          container
+          item
+          xs={12}
+          justify="flex-end"
+          spacing={2}
+          className={styles.routesContainer}
+        >
+          {props.routes.map((route: Route, index: number) => {
+            return (
+              <Grid key={index} item>
+                <NavLink
+                  activeClassName={
+                    route.route === "/" ? null : styles.activeRoute
+                  }
+                  className={styles.route}
+                  to={route.route}
+                >
+                  {route.name}
+                </NavLink>
+              </Grid>
+            );
+          })}
+        </Grid>
       </Grid>
-    </Grid>
+    </Lightspeed>
   );
 }

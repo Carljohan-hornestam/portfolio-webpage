@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Grid, makeStyles } from "@material-ui/core";
+import Fade from "react-reveal";
 import axios from "axios";
 import Header from "./components/Header";
 import About from "./components/About";
@@ -8,6 +9,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import profileImage from "./images/profile-pic.jpg";
 import InfoBox from "./components/InfoBox";
+import SmallAbout from "./components/SmallAbout";
 
 const useStyles = makeStyles((theme) => ({
   homeContainer: {
@@ -15,19 +17,17 @@ const useStyles = makeStyles((theme) => ({
     background: "#00203FFF",
   },
   homeContentContainer: {
-    marginTop: theme.spacing(10)
   },
   infoBoxContainer: {
-    // border: "2px solid white",
-    // background: "white",
-    // boxShadow: "inset 0 0 5px 5px #557A95",
-    maxWidth: 300,
+    maxWidth: 350,
     height: 200,
     marginTop: theme.spacing(5),
     marginRight: theme.spacing(2)
   },
-  pp: {
-    borderRadius: "50px",
+  profileImage: {
+    borderRadius: "30px",
+    // boxShadow: "10px 10px 5px 0px rgba(173,239,209,0.55)",
+    boxShadow: "0px 0px 25px -2px #ADEFD1FF",  
   },
 }));
 
@@ -57,21 +57,30 @@ const App: React.FC = () => {
 
   function renderHome() {
     return (
-      <Grid className={styles.homeContainer}  container>
-        <Grid className={styles.homeContentContainer} justify="center" container item xs={12}>
+      <>
+      <Grid className={styles.homeContainer} container>
+        <Grid className={styles.homeContentContainer} justify="center" alignContent="center" container item xs={12}>
           <Grid className={styles.infoBoxContainer} container item>
+        <Fade right>
            <InfoBox info={{
              firstName: infoBoxInfo.firstName,
              lastName: infoBoxInfo.lastName,
              profession: infoBoxInfo.profession,
              githubLink: infoBoxInfo.githubLink
            }}/>
+        </Fade>
           </Grid>
           <Grid item>
-            <img className={styles.pp} src={`${profileImage}`}></img>
+            <Fade left>
+            <img className={styles.profileImage} src={`${profileImage}`}></img>
+          </Fade>
           </Grid>
         </Grid>
       </Grid>
+      <Grid container>
+        <SmallAbout/>
+      </Grid>
+      </>
     );
   }
 
