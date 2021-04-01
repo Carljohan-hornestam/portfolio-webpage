@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { Grid, makeStyles } from "@material-ui/core";
+import { Card, Grid, makeStyles, Paper } from "@material-ui/core";
 import Fade from "react-reveal";
 import axios from "axios";
 import Header from "./components/Header";
@@ -8,26 +8,31 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import profileImage from "./images/profile-pic.jpg";
+import bgImage from "./images/main.jpg";
 import InfoBox from "./components/InfoBox";
 import SmallAbout from "./components/SmallAbout";
 
 const useStyles = makeStyles((theme) => ({
   homeContainer: {
-    height: 600,
-    background: "#00203FFF",
+    height: 750,
+    // background: "#00203FFF",
+    backgroundImage: `url(${bgImage})`
   },
   homeContentContainer: {
   },
   infoBoxContainer: {
     maxWidth: 350,
     height: 200,
-    marginTop: theme.spacing(5),
+    marginTop: theme.spacing(3),
     marginRight: theme.spacing(2)
   },
   profileImage: {
     borderRadius: "30px",
-    // boxShadow: "10px 10px 5px 0px rgba(173,239,209,0.55)",
     boxShadow: "0px 0px 25px -2px #ADEFD1FF",  
+  },
+  smallAboutContainer: {
+    background: "#ADEFD1FF",
+    height: 500
   },
 }));
 
@@ -47,6 +52,7 @@ const App: React.FC = () => {
           const info = {
             firstName: res.data.info.firstName?? "",
             lastName: res.data.info.lastName?? "",
+            email: res.data.info.email?? "",
             profession: res.data.info.profession?? "",
             githubLink: res.data.info.githubLink?? ""
           };
@@ -65,6 +71,7 @@ const App: React.FC = () => {
            <InfoBox info={{
              firstName: infoBoxInfo.firstName,
              lastName: infoBoxInfo.lastName,
+             email: infoBoxInfo.email,
              profession: infoBoxInfo.profession,
              githubLink: infoBoxInfo.githubLink
            }}/>
@@ -77,7 +84,7 @@ const App: React.FC = () => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid container>
+      <Grid container className={styles.smallAboutContainer}>
         <SmallAbout/>
       </Grid>
       </>

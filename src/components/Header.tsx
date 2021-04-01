@@ -1,4 +1,4 @@
-import { makeStyles, Grid } from "@material-ui/core";
+import { makeStyles, Grid, Typography } from "@material-ui/core";
 import Lightspeed from "react-reveal";
 import { NavLink } from "react-router-dom";
 
@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: "2px solid #30110d",
   },
   routesContainer: {
-    margin: theme.spacing(2),
+    // margin: theme.spacing(2),
     marginRight: theme.spacing(5),
   },
   route: {
@@ -58,7 +58,9 @@ export default function Header(props: HeaderProps) {
                   className={styles.route}
                   to={route.route}
                 >
+                  <Typography variant="h6">
                   {route.name}
+                  </Typography>
                 </NavLink>
               </Grid>
             );

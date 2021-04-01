@@ -1,6 +1,8 @@
-import { makeStyles, Grid, IconButton, Typography, Button } from '@material-ui/core';
+import {useHistory} from "react-router-dom";
+import { makeStyles, Grid, IconButton, Typography, Button, Tooltip } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import EmailIcon from '@material-ui/icons/Email';
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -18,14 +20,15 @@ interface InfoProps {
   info: {
     firstName: string;
     lastName: string;
+    email: string;
     profession: string;
     githubLink: string;
   };
 }
 
 export default function InfoBox({info}: InfoProps) {
-
   const styles = useStyles();
+  const history = useHistory();
     
   return (
     <>
@@ -36,14 +39,19 @@ export default function InfoBox({info}: InfoProps) {
     <Typography className={styles.text} variant="h6">{info.profession}</Typography>
     </Grid>
     <Grid style={{padding: 10}} item xs={12}>
-    <Button className={styles.contactButton}>Kontakt</Button>
+    <Button className={styles.contactButton} onClick={(() => history.push("/contact"))}>Kontakt</Button>
     </Grid>
     <Grid item xs={12}>
+      <Tooltip title="Klicka här för att komma till min GitHub">
     <IconButton color="secondary" href={`${info.githubLink}`} target="_blank">
       <GitHubIcon fontSize="large"/>
     </IconButton>
+    </Tooltip>
     <IconButton color="secondary" href={`${info.githubLink}`} target="_blank">
       <FacebookIcon fontSize="large"/>
+    </IconButton>
+    <IconButton color="secondary" href={`mailto:${info.email}`} target="_blank">
+      <EmailIcon fontSize="large"/>
     </IconButton>
     </Grid>
     </>
