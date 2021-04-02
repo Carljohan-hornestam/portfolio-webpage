@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { Card, Grid, makeStyles, Paper } from "@material-ui/core";
+import { Grid, makeStyles } from "@material-ui/core";
 import Fade from "react-reveal";
 import axios from "axios";
 import Header from "./components/Header";
@@ -11,10 +11,11 @@ import profileImage from "./images/profile-pic.jpg";
 import bgImage from "./images/main.jpg";
 import InfoBox from "./components/InfoBox";
 import SmallAbout from "./components/SmallAbout";
+import SmallProjects from "./components/SmallProjects";
 
 const useStyles = makeStyles((theme) => ({
   homeContainer: {
-    height: 750,
+    height: 650,
     // background: "#00203FFF",
     backgroundImage: `url(${bgImage})`
   },
@@ -34,10 +35,15 @@ const useStyles = makeStyles((theme) => ({
     background: "#ADEFD1FF",
     height: 500
   },
+  smallProjectsContainer: {
+    backgroundImage: `url(${bgImage})`,
+    height: 600
+  },
 }));
 
 const App: React.FC = () => {
   const [routes, setRoutes] = useState<[]>([]);
+  const [projects, setProjects] = useState<[]>([]);
   const [infoBoxInfo, setInfoBoxInfo] = useState<any>({});
   const styles = useStyles();  
 
@@ -45,7 +51,7 @@ const App: React.FC = () => {
     axios
       .get("/data/routes.json")
       .then((res) => {
-        setRoutes(res.data.routes);
+        setRoutes(res.data.routes?? [])
       })
       .then(() => {
         axios.get("/data/infoBoxInfo.json").then((res) => {
@@ -56,10 +62,17 @@ const App: React.FC = () => {
             profession: res.data.info.profession?? "",
             githubLink: res.data.info.githubLink?? ""
           };
-          setInfoBoxInfo(info);
+          axios.get("/data/projects.json").then((res) => {
+            const projects = res.data.projects?? [];
+            setInfoBoxInfo(info);
+            setProjects(projects);
+          })
         });
       });
   }, []);
+
+  console.log('projects:', projects);
+  
 
   function renderHome() {
     return (
@@ -86,6 +99,9 @@ const App: React.FC = () => {
       </Grid>
       <Grid container className={styles.smallAboutContainer}>
         <SmallAbout/>
+      </Grid>
+      <Grid container className={styles.smallProjectsContainer} >
+        <SmallProjects projects={projects}/>
       </Grid>
       </>
     );

@@ -9,6 +9,9 @@ const useStyles = makeStyles((theme) => ({
     color: "#ADEFD1FF",
     fontFamily: "Averia",
   },
+  textGrid: {
+    padding: theme.spacing(1)
+  },
   contactButton: {
     color: "#ADEFD1FF",
     fontFamily: "Averia",
@@ -32,13 +35,13 @@ export default function InfoBox({info}: InfoProps) {
     
   return (
     <>
-    <Grid style={{padding: 10}} item xs={12}>
+    <Grid className={styles.textGrid} item xs={12}>
     <Typography className={styles.text} variant="h4">{info.firstName} {" "} {info.lastName}</Typography>
     </Grid>
-    <Grid style={{padding: 10}} item xs={12}>
+    <Grid className={styles.textGrid} item xs={12}>
     <Typography className={styles.text} variant="h6">{info.profession}</Typography>
     </Grid>
-    <Grid style={{padding: 10}} item xs={12}>
+    <Grid className={styles.textGrid} item xs={12}>
     <Button className={styles.contactButton} onClick={(() => history.push("/contact"))}>Kontakt</Button>
     </Grid>
     <Grid item xs={12}>
