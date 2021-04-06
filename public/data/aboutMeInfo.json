@@ -1,10 +1,30 @@
 {
-  "infoAboutMe": {
+  "info": {
     "firstName": "Carl-Johan",
     "lastName": "Hornestam",
+    "email": "carlis.hornestam@hotmail.com",
+    "profession": "Javautvecklare",
     "description": "blablabla jag är superduktig på att koda snälla anställ mig tiihii",
-    "education": [
-      ""
-    ]
+    "githubLink": "https://github.com/Carljohan-hornestam",
+    "education": {
+      "educationName": "Javautvecklare",
+      "schoolName": "EC Utbildning",
+      "educationDescription": "wow much info",
+      "languages": [
+        "Java",
+        "C#",
+        "Kotlin",
+        "Javascript",
+        "Typescript",
+        "HTML",
+        "CSS",
+        "Node",
+        "Vue2/3",
+        "React",
+        "SQL",
+        "SQLite",
+        "Neo4J"
+      ]
+    }
   }
 }

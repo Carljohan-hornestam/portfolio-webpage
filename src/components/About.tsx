@@ -4,12 +4,10 @@ const useStyles = makeStyles((theme) => ({
  
 }));
 
-const About: React.FC = () => {
+export default function About() {
   const styles = useStyles();
 
   return (
     <div>OM MEI</div>
   );
 }
-
-export default About;
