@@ -2,7 +2,6 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import { Fade, Flip } from "react-reveal";
 import { makeStyles, Grid, Typography, Button, Theme, IconButton } from "@material-ui/core";
-import InfoIcon from '@material-ui/icons/Info';
 
 const useStyles = makeStyles((theme: Theme) => ({
   buttonsContainer: {
@@ -11,12 +10,13 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   infoLinkButton: {
     color: "#00203FFF",
-    // border: "1px solid black",
-    // width: 200,
-    // borderRadius: "50px",
+    border: "1px solid black",
+    width: 200,
+    borderRadius: "50px",
     "&:hover": {
       background: "transparent",
-      // border: "1px solid #f50057",
+      border: "1px solid #f50057",
+      transition: "0.4s"
     },
   },
   infoButton: {
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     "&:hover": {
       background: "transparent",
       border: "1px solid #f50057",
-      transition: "0.1s",
+      transition: "0.4s",
     },
   },
   activeInfoButton: {
@@ -97,7 +97,7 @@ const SmallAbout: React.FC = () => {
         </Grid>
       </Grid>
       <Grid container item xs={7}>
-        <Fade right>
+        <Fade bottom>
           {infoState === "info" ? (
             <Typography className={styles.typography} variant="h5">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
@@ -136,8 +136,7 @@ const SmallAbout: React.FC = () => {
           className={styles.infoLinkButton}
           onClick={() => history.push("/about")}
         >
-          <InfoIcon color="primary" fontSize="large"/>
-          {/* <Typography variant="h6">Mer info</Typography> */}
+          <Typography variant="h6">Mer info</Typography>
         </IconButton>
       </Grid>
     </>

@@ -16,8 +16,8 @@ import SmallProjects from "./components/SmallProjects";
 const useStyles = makeStyles((theme) => ({
   homeContainer: {
     height: 650,
-    // background: "#00203FFF",
-    backgroundImage: `url(${bgImage})`
+    background: "#00203FFF",
+    // backgroundImage: `url(${bgImage})`
   },
   homeContentContainer: {
   },
@@ -36,7 +36,8 @@ const useStyles = makeStyles((theme) => ({
     height: 500
   },
   smallProjectsContainer: {
-    backgroundImage: `url(${bgImage})`,
+    // backgroundImage: `url(${bgImage})`,
+    background: "#00203FFF",
     height: 600
   },
 }));
@@ -92,7 +93,7 @@ const App: React.FC = () => {
           </Grid>
           <Grid item>
             <Fade left>
-            <img className={styles.profileImage} src={`${profileImage}`}></img>
+            <img className={styles.profileImage} alt="" src={`${profileImage}`}></img>
           </Fade>
           </Grid>
         </Grid>
