@@ -59,7 +59,7 @@ export default function About({ info }: AboutProps) {
       <Grid className={styles.aboutContainer} container>
         <Fade>
           <Grid className={styles.aboutContentContainer} container item xs={12}>
-            <Grid item xs={4} style={{ textAlign: "end", marginTop: 30 }}>
+            <Grid item xs={4} style={{ textAlign: "end", marginTop: 35 }}>
               <img
                 alt=""
                 className={styles.image}

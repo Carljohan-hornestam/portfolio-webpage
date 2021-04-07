@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   infoButton: {
     color: "#00203FFF",
     border: "1px solid black",
+    width: 150,
     marginBottom: theme.spacing(2),
     "&:hover": {
       background: "transparent",
@@ -31,6 +32,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   activeInfoButton: {
     color: "#00203FFF",
+    width: 150,
     marginBottom: theme.spacing(2),
     border: "2px solid #f50057",
   },

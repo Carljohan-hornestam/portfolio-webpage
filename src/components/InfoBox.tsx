@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   contactButton: {
     color: "#ADEFD1FF",
-    fontFamily: "Averia",
+    fontFamily: "Bebas+Neue",
     border: "2px solid #ADEFD1FF",
   }
 }))
