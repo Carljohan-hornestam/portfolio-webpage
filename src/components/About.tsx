@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     margin: theme.spacing(1),
     fontFamily: "Bebas+Neue",
-    fontSize: 18
+    fontSize: 20
   },
 }));
 
