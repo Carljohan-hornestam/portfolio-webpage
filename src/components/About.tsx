@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     margin: theme.spacing(1),
     fontFamily: "Bebas+Neue",
-    fontSize: 20
+    fontSize: 20,
   },
 }));
 
@@ -94,18 +94,17 @@ export default function About({ info }: AboutProps) {
                 </Typography>
                 <Grid container item xs={12} justify="flex-end">
                   <Grid item xs={12}>
-                    {languages &&
-                      languages.map((language: Language, index: number) => {
-                        return (
-                          <Chip
-                            variant="outlined"
-                            color="secondary"
-                            className={styles.chip}
-                            key={index}
-                            label={language.name}
-                          />
-                        );
-                      })}
+                    {languages.map((language: Language, index: number) => {
+                      return (
+                        <Chip
+                          variant="outlined"
+                          color="secondary"
+                          className={styles.chip}
+                          key={index}
+                          label={language.name}
+                        />
+                      );
+                    })}
                   </Grid>
                 </Grid>
               </Grid>
