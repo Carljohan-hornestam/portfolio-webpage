@@ -11,19 +11,48 @@
       "schoolName": "EC Utbildning",
       "educationDescription": "wow much info",
       "languages": [
-        "Java",
-        "C#",
-        "Kotlin",
-        "Javascript",
-        "Typescript",
-        "HTML",
-        "CSS",
-        "Node",
-        "Vue2/3",
-        "React",
-        "SQL",
-        "SQLite",
-        "Neo4J"
+        {
+          "name": "Java"
+        },
+        {
+          "name": "C#"
+        },
+        {
+          "name": "Kotlin"
+        },
+        {
+          "name": "Javascript"
+        },
+        {
+          "name": "Typescript"
+        },
+        {
+          "name": "HTML"
+        },
+        {
+          "name": "CSS"
+        },
+        {
+          "name": "Node"
+        },
+        {
+          "name": "Spring"
+        },
+        {
+          "name": "Vue2/3"
+        },
+        {
+          "name": "React"
+        },
+        {
+          "name": "SQL"
+        },
+        {
+          "name": "SQLite"
+        },
+        {
+          "name": "Neo4J"
+        }
       ]
     }
   }

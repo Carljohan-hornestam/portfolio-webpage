@@ -125,7 +125,7 @@ export default function SmallProjects(props: SmallProjectsProps) {
                     </Tooltip>
                   </Grid>
                 </Grid>
-                <Rotate bottom>
+                <Rotate top>
                   <Grid item xs={3}>
                     <img
                       className={styles.projectImage}

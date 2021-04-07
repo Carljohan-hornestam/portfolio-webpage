@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
 const App: React.FC = () => {
   const [routes, setRoutes] = useState<[]>([]);
   const [projects, setProjects] = useState<[]>([]);
-  const [infoBoxInfo, setInfoBoxInfo] = useState<any>({});
+  const [info, setInfo] = useState<any>({});
   const styles = useStyles();
 
   useEffect(() => {
@@ -64,12 +64,12 @@ const App: React.FC = () => {
             githubLink: res.data.info.githubLink ?? "",
             educationName: res.data.info.education.educationName ?? "",
             schoolName: res.data.info.education.schoolName ?? "",
-            educationDescription: res.data.info.education.educationDescription ?? "",
-            languages: res.data.info.education.languages ?? [],
+            educationDescription:
+              res.data.info.education.educationDescription ?? "",
           };
           axios.get("/data/projects.json").then((res) => {
             const projects = res.data.projects ?? [];
-            setInfoBoxInfo(info);
+            setInfo(info);
             setProjects(projects);
           });
         });
@@ -92,11 +92,11 @@ const App: React.FC = () => {
               <Fade right>
                 <InfoBox
                   info={{
-                    firstName: infoBoxInfo.firstName,
-                    lastName: infoBoxInfo.lastName,
-                    email: infoBoxInfo.email,
-                    profession: infoBoxInfo.profession,
-                    githubLink: infoBoxInfo.githubLink,
+                    firstName: info.firstName,
+                    lastName: info.lastName,
+                    email: info.email,
+                    profession: info.profession,
+                    githubLink: info.githubLink,
                   }}
                 />
               </Fade>
@@ -131,7 +131,18 @@ const App: React.FC = () => {
             {renderHome()}
           </Route>
           <Route path="/about">
-            <About />
+            <About
+              info={{
+                firstName: info.firstName,
+                lastName: info.lastName,
+                description: info.description,
+                email: info.email,
+                profession: info.profession,
+                githubLink: info.githubLink,
+                schoolName: info.schoolName,
+                educationDescription: info.educationDescription,
+              }}
+            />
           </Route>
           <Route path="/projects">
             <Projects />
