@@ -1,26 +1,28 @@
 {
   "projects": [
     {
-      "name": "Super Galaxy Face Melter 2",
-      "imageLink": "../images/exampleImage.jpg",
+      "name": "Super Galaxy Face Melter",
       "description": "adomnafanmfijuangagniuwngikwujgnwkujgnwjuhnwökiujhniöwkjhnwjkuhnwö-kijuhnböwujihjnwöjkuihnwöhiuwnöiuwjnwsjuikn<wöuihngwöuhjnb<wöiuhbjn<wöjuikhnwöiujn<ölikujbw<nöiuw<nbö<ikujwhw<pöuhbjwnusnv<iwnhk",
-      "githubLink": "https://github.com/BitLord69/SGFM2"
+      "githubLink": "https://github.com/nekcoj/SuperGalaxyFaceMelter",
+      "imageSrc": "../images/exampleImage.jpg",
+      "writtenIn": [ "Java" ]
     },
     {
       "name": "Super Galaxy Face Melter 2",
-      "imageLink": "../images/exampleImage.jpg",
       "description": "adomnafanmfijuangagniuwngikwujgnwkujgnwjuhnwökiujhniöwkjhnwjkuhnwö-kijuhnböwujihjnwöjkuihnwöhiuwnöiuwjnwsjuikn<wöuihngwöuhjnb<wöiuhbjn<wöjuikhnwöiujn<ölikujbw<nöiuw<nbö<ikujwhw<pöuhbjwnusnv<iwnhk",
-      "githubLink": "https://github.com/BitLord69/SGFM2"
+      "githubLink": "https://github.com/BitLord69/SGFM2",
+      "writtenIn": [
+        "Javascript", "Vue 3", "Java"
+      ]
+    },
+    {
+      "name": "Marvelissimo",
+      "description": "adomnafanmfijuangagniuwngikwujgnwkujgnwjuhnwökiujhniöwkjhnwjkuhnwö-kijuhnböwujihjnwöjkuihnwöhiuwnöiuwjnwsjuikn<wöuihngwöuhjnb<wöiuhbjn<wöjuikhnwöiujn<ölikujbw<nöiuw<nbö<ikujwhw<pöuhbjwnusnv<iwnhk",
+      "githubLink": "https://github.com/BitLord69/Marvelissimo",
+      "writtenIn": [ "Kotlin" ]
     },
     {
       "name": "Super Galaxy Face Melter 2",
-      "imageLink": "../images/exampleImage.jpg",
-      "description": "adomnafanmfijuangagniuwngikwujgnwkujgnwjuhnwökiujhniöwkjhnwjkuhnwö-kijuhnböwujihjnwöjkuihnwöhiuwnöiuwjnwsjuikn<wöuihngwöuhjnb<wöiuhbjn<wöjuikhnwöiujn<ölikujbw<nöiuw<nbö<ikujwhw<pöuhbjwnusnv<iwnhk",
-      "githubLink": "https://github.com/BitLord69/SGFM2"
-    },
-    {
-      "name": "Super Galaxy Face Melter 2",
-      "imageLink": "../images/exampleImage.jpg",
       "description": "adomnafanmfijuangagniuwngikwujgnwkujgnwjuhnwökiujhniöwkjhnwjkuhnwö-kijuhnböwujihjnwöjkuihnwöhiuwnöiuwjnwsjuikn<wöuihngwöuhjnb<wöiuhbjn<wöjuikhnwöiujn<ölikujbw<nöiuw<nbö<ikujwhw<pöuhbjwnusnv<iwnhk",
       "githubLink": "https://github.com/BitLord69/SGFM2"
     }

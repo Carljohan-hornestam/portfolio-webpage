@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   smallProjectsContainer: {
     // backgroundImage: `url(${bgImage})`,
     background: "#00203FFF",
-    height: 600,
+    height: 700,
   },
 }));
 
@@ -145,7 +145,7 @@ const App: React.FC = () => {
             />
           </Route>
           <Route path="/projects">
-            <Projects />
+            <Projects projects={projects}/>
           </Route>
           <Route path="/contact">
             <Contact />

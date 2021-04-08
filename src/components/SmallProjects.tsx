@@ -1,3 +1,4 @@
+import { useHistory } from "react-router-dom";
 import {
   makeStyles,
   Grid,
@@ -25,7 +26,17 @@ const useStyles = makeStyles((theme) => ({
     color: "#ADEFD1FF",
     padding: theme.spacing(2),
     fontFamily: "Averia",
-    // textAlign: "center"
+  },
+  projectsLinkButton: {
+    color: "#ADEFD1FF",
+    border: "1px solid #ADEFD1FF",
+    width: 200,
+    borderRadius: "50px",
+    "&:hover": {
+      background: "transparent",
+      border: "1px solid #f50057",
+      transition: "0.4s",
+    },
   },
 }));
 
@@ -41,6 +52,7 @@ interface Project {
 }
 export default function SmallProjects(props: SmallProjectsProps) {
   const styles = useStyles();
+  const history = useHistory();
   const projects = props.projects;
 
   return (
@@ -141,6 +153,20 @@ export default function SmallProjects(props: SmallProjectsProps) {
           </Grid>
         ) : null;
       })}
+      <Grid justify="center" alignContent="flex-start" container item xs={12}>
+        <IconButton
+          className={styles.projectsLinkButton}
+          onClick={() => {
+            window.scroll({
+              top: 0,
+              behavior: 'smooth'
+            });
+            history.push("/projects");
+          }}
+        >
+          <Typography variant="h6">Se fler projekt</Typography>
+        </IconButton>
+      </Grid>
     </>
   );
 }
