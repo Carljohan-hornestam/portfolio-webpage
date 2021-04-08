@@ -4,6 +4,7 @@ import {
   Typography,
   Tooltip,
   IconButton,
+  Chip,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import exampleImage from "../images/exampleImage.jpg";
@@ -11,11 +12,19 @@ import exampleImage from "../images/exampleImage.jpg";
 const useStyles = makeStyles((theme) => ({
   projectsContainer: {
     background: "#00203FFF",
+    padding: theme.spacing(2)
   },
   typography: {
     color: "#ADEFD1FF",
     padding: theme.spacing(2),
     fontFamily: "Averia",
+    textAlign: "center"
+  },
+  chip: {
+    padding: theme.spacing(2),
+    margin: theme.spacing(1),
+    fontFamily: "Bebas+Neue",
+    fontSize: 12,
   },
 }));
 
@@ -28,6 +37,9 @@ interface Project {
   githubLink: string;
   imageSrc: string;
   writtenIn: [];
+}
+interface Language {
+  languageName: string;
 }
 
 export default function Projects(props: ProjectsProps) {
@@ -50,12 +62,12 @@ export default function Projects(props: ProjectsProps) {
                 <Grid item xs={3}>
                   <img
                     alt=""
-                    height={250}
-                    width={420}
+                    height={300}
+                    width={450}
                     src={`${exampleImage}`}
                   ></img>
                 </Grid>
-                <Grid container item xs={9} style={{textAlign: "left"}}>
+                <Grid container item xs={9}>
                   <Grid item xs={12}>
                     <Typography className={styles.typography} variant="h5">
                       {project.name}
@@ -66,7 +78,7 @@ export default function Projects(props: ProjectsProps) {
                       {project.description}
                     </Typography>
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid container item xs={12} justify="center">
                     <Tooltip title="Länk till GitHub repo">
                       <IconButton
                         color="secondary"
@@ -76,12 +88,26 @@ export default function Projects(props: ProjectsProps) {
                         <GitHubIcon fontSize="large" />
                       </IconButton>
                     </Tooltip>
+                  </Grid>
+                  <Grid container justify="center" item xs={12}>
+                    {project.writtenIn.map((i: number) => {
+                      return (
+                        <>
+                          <Chip
+                            className={styles.chip}
+                            color="secondary"
+                            label={`${i}`}
+                          ></Chip>
+                          
+                        </>
+                      );
+                    })}
                   </Grid>
                 </Grid>
               </>
             ) : (
               <>
-                <Grid style={{ textAlign: "right" }} container item xs={9}>
+                <Grid container item xs={9}>
                   <Grid item xs={12}>
                     <Typography className={styles.typography} variant="h5">
                       {project.name}
@@ -92,7 +118,7 @@ export default function Projects(props: ProjectsProps) {
                       {project.description}
                     </Typography>
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid container justify="center" item xs={12}>
                     <Tooltip title="Länk till GitHub repo">
                       <IconButton
                         color="secondary"
@@ -103,12 +129,24 @@ export default function Projects(props: ProjectsProps) {
                       </IconButton>
                     </Tooltip>
                   </Grid>
+                  <Grid justify="center" container item xs={12}>
+                    {project.writtenIn.map((i: number) => {
+                      return (
+                        <Chip
+                          className={styles.chip}
+                          color="secondary"
+                          label={`${i}`}
+                        ></Chip>
+                      );
+                    })}
+                  </Grid>
                 </Grid>
+
                 <Grid item xs={3}>
                   <img
                     alt=""
-                    height={250}
-                    width={420}
+                    height={300}
+                    width={450}
                     src={`${exampleImage}`}
                   ></img>
                 </Grid>

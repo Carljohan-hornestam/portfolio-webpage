@@ -76,6 +76,8 @@ const App: React.FC = () => {
       });
   }, []);
 
+  console.log('projects in app:', projects);
+  
   function renderHome() {
     return (
       <>
