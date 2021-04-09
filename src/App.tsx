@@ -12,6 +12,7 @@ import bgImage from "./images/main.jpg";
 import InfoBox from "./components/InfoBox";
 import SmallAbout from "./components/SmallAbout";
 import SmallProjects from "./components/SmallProjects";
+import { projects1 } from "./data2/projects1.js";
 
 const useStyles = makeStyles((theme) => ({
   homeContainer: {
@@ -43,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
 
 const App: React.FC = () => {
   const [routes, setRoutes] = useState<[]>([]);
-  const [projects, setProjects] = useState<[]>([]);
+  const [projects, setProjects] = useState<any>([]);
   const [info, setInfo] = useState<any>({});
   const styles = useStyles();
 
@@ -67,17 +68,12 @@ const App: React.FC = () => {
             educationDescription:
               res.data.info.education.educationDescription ?? "",
           };
-          axios.get("/data/projects.json").then((res) => {
-            const projects = res.data.projects ?? [];
-            setInfo(info);
-            setProjects(projects);
-          });
+          setInfo(info);
+          setProjects(projects1);
         });
       });
   }, []);
 
-  console.log('projects in app:', projects);
-  
   function renderHome() {
     return (
       <>
@@ -147,7 +143,7 @@ const App: React.FC = () => {
             />
           </Route>
           <Route path="/projects">
-            <Projects projects={projects}/>
+            <Projects projects={projects} />
           </Route>
           <Route path="/contact">
             <Contact />

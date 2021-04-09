@@ -7,24 +7,23 @@ import {
   Chip,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import exampleImage from "../images/exampleImage.jpg";
 
 const useStyles = makeStyles((theme) => ({
   projectsContainer: {
     background: "#00203FFF",
-    padding: theme.spacing(2)
+    padding: theme.spacing(2),
   },
   typography: {
     color: "#ADEFD1FF",
     padding: theme.spacing(2),
     fontFamily: "Averia",
-    textAlign: "center"
+    textAlign: "center",
   },
   chip: {
     padding: theme.spacing(2),
     margin: theme.spacing(1),
     fontFamily: "Bebas+Neue",
-    fontSize: 12,
+    fontSize: 15,
   },
 }));
 
@@ -37,9 +36,6 @@ interface Project {
   githubLink: string;
   imageSrc: string;
   writtenIn: [];
-}
-interface Language {
-  languageName: string;
 }
 
 export default function Projects(props: ProjectsProps) {
@@ -64,7 +60,7 @@ export default function Projects(props: ProjectsProps) {
                     alt=""
                     height={300}
                     width={450}
-                    src={`${exampleImage}`}
+                    src={`${project.imageSrc}`}
                   ></img>
                 </Grid>
                 <Grid container item xs={9}>
@@ -94,11 +90,11 @@ export default function Projects(props: ProjectsProps) {
                       return (
                         <>
                           <Chip
+                            variant="outlined"
                             className={styles.chip}
                             color="secondary"
                             label={`${i}`}
                           ></Chip>
-                          
                         </>
                       );
                     })}
@@ -133,6 +129,7 @@ export default function Projects(props: ProjectsProps) {
                     {project.writtenIn.map((i: number) => {
                       return (
                         <Chip
+                          variant="outlined"
                           className={styles.chip}
                           color="secondary"
                           label={`${i}`}
@@ -147,7 +144,7 @@ export default function Projects(props: ProjectsProps) {
                     alt=""
                     height={300}
                     width={450}
-                    src={`${exampleImage}`}
+                    src={`${project.imageSrc}`}
                   ></img>
                 </Grid>
               </>
