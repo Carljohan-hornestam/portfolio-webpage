@@ -5,6 +5,7 @@ import {
   Typography,
   IconButton,
   Tooltip,
+  Chip,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import Fade from "react-reveal";
@@ -38,6 +39,12 @@ const useStyles = makeStyles((theme) => ({
       transition: "0.4s",
     },
   },
+  chip: {
+    padding: theme.spacing(2),
+    margin: theme.spacing(1),
+    fontFamily: "Bebas+Neue",
+    fontSize: 15,
+  },
 }));
 
 interface SmallProjectsProps {
@@ -49,6 +56,7 @@ interface Project {
   imageLink: string;
   description: string;
   githubLink: string;
+  writtenIn: [];
 }
 export default function SmallProjects(props: SmallProjectsProps) {
   const styles = useStyles();
@@ -106,6 +114,21 @@ export default function SmallProjects(props: SmallProjectsProps) {
                       </IconButton>
                     </Tooltip>
                   </Grid>
+                  <Grid container justify="center" item xs={12}>
+                    {project.writtenIn.map((i: number) => {
+                      return (
+                        <>
+                          <Chip
+                            key={i}
+                            variant="outlined"
+                            className={styles.chip}
+                            color="secondary"
+                            label={`${i}`}
+                          ></Chip>
+                        </>
+                      );
+                    })}
+                  </Grid>
                 </Grid>
               </>
             ) : (
@@ -136,6 +159,21 @@ export default function SmallProjects(props: SmallProjectsProps) {
                       </IconButton>
                     </Tooltip>
                   </Grid>
+                  <Grid container justify="center" item xs={12}>
+                    {project.writtenIn.map((i: number) => {
+                      return (
+                        <>
+                          <Chip
+                            key={i}
+                            variant="outlined"
+                            className={styles.chip}
+                            color="secondary"
+                            label={`${i}`}
+                          ></Chip>
+                        </>
+                      );
+                    })}
+                  </Grid>
                 </Grid>
                 <Rotate top>
                   <Grid item xs={3}>
@@ -159,7 +197,7 @@ export default function SmallProjects(props: SmallProjectsProps) {
           onClick={() => {
             window.scroll({
               top: 0,
-              behavior: 'smooth'
+              behavior: "smooth",
             });
             history.push("/projects");
           }}

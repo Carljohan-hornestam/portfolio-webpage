@@ -39,7 +39,7 @@
           "name": "Spring"
         },
         {
-          "name": "Vue2/3"
+          "name": "Vue 2 & 3"
         },
         {
           "name": "React"
@@ -52,6 +52,9 @@
         },
         {
           "name": "Neo4J"
+        },
+        {
+          "name": "Firebase"
         }
       ]
     }

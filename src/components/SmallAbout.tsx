@@ -1,7 +1,14 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { Fade, Flip } from "react-reveal";
-import { makeStyles, Grid, Typography, Button, Theme, IconButton } from "@material-ui/core";
+import {
+  makeStyles,
+  Grid,
+  Typography,
+  Button,
+  Theme,
+  IconButton,
+} from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) => ({
   buttonsContainer: {
@@ -16,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     "&:hover": {
       background: "transparent",
       border: "1px solid #f50057",
-      transition: "0.4s"
+      transition: "0.4s",
     },
   },
   infoButton: {
@@ -102,33 +109,15 @@ const SmallAbout: React.FC = () => {
         <Fade bottom>
           {infoState === "info" ? (
             <Typography className={styles.typography} variant="h5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-              quod qui incidunt quia vero, facilis deleniti quas consectetur
-              ullam porro, atque soluta eligendi reprehenderit earum ea nam
-              voluptatum autem accusamus dicta sint numquam cum tempore cumque
-              necessitatibus! Ipsam vitae quibusdam, doloribus deleniti,
-              laudantium eius blanditiis est dolore autem sapiente iste. Est
-              molestias ab dolor necessitatibus similique reiciendis inventore
-              debitis nisi magnam, rerum eius consequatur eum dolorem officiis
-              voluptatibus reprehenderit in minus! Ut odit saepe, veritatis illo
-              dolores earum incidunt quasi deleniti magni officia. Voluptates
-              molestiae incidunt esse ad sit nostrum, ipsam, sint in
-              consequuntur illo autem ex. Atque, explicabo tempora.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Praesentium distinctio similique, magnam ipsa enim debitis
+              dignissimos ea magni odio ullam.
             </Typography>
           ) : (
             <Typography className={styles.typography} variant="h5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi vel
-              nulla, facere quas eum dolorem rem et accusantium in porro tenetur
-              ipsam eligendi inventore minima, numquam saepe corrupti at velit,
-              pariatur quis accusamus voluptatum recusandae. Esse, velit
-              corporis! Enim magni animi facilis dolorum atque ipsum laborum
-              officiis quam, nihil fugiat officia deleniti nam vero dolorem
-              excepturi facere eveniet optio accusantium? Necessitatibus alias
-              quibusdam officiis corrupti fugiat labore ratione eaque optio iste
-              sequi voluptatibus natus quasi consequuntur cupiditate, in aliquid
-              nulla dolor repellendus porro, est harum laboriosam nisi velit at?
-              Laboriosam assumenda fuga enim corporis sunt adipisci,
-              necessitatibus vero quam maiores?
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Praesentium distinctio similique, magnam ipsa enim debitis
+              dignissimos ea magni odio ullam.
             </Typography>
           )}
         </Fade>

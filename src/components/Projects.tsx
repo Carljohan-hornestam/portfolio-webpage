@@ -90,6 +90,7 @@ export default function Projects(props: ProjectsProps) {
                       return (
                         <>
                           <Chip
+                            key={i}
                             variant="outlined"
                             className={styles.chip}
                             color="secondary"
@@ -129,6 +130,7 @@ export default function Projects(props: ProjectsProps) {
                     {project.writtenIn.map((i: number) => {
                       return (
                         <Chip
+                          key={i}
                           variant="outlined"
                           className={styles.chip}
                           color="secondary"

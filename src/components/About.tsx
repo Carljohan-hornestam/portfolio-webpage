@@ -59,7 +59,7 @@ export default function About({ info }: AboutProps) {
       <Grid className={styles.aboutContainer} container>
         <Fade>
           <Grid className={styles.aboutContentContainer} container item xs={12}>
-            <Grid item xs={4} style={{ textAlign: "end", marginTop: 35 }}>
+            <Grid item xs={4} style={{ textAlign: "end", marginTop: 55 }}>
               <img
                 alt=""
                 className={styles.image}
@@ -93,6 +93,9 @@ export default function About({ info }: AboutProps) {
                   cum, molestias esse earum veniam. Accusamus.
                 </Typography>
                 <Grid container item xs={12} justify="flex-end">
+                  <Grid item xs={12}>
+                    <Typography className={styles.typography} variant="h5">Mina kunskaper</Typography>
+                  </Grid>
                   <Grid item xs={12}>
                     {languages.map((language: Language, index: number) => {
                       return (
