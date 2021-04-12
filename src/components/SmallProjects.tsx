@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
   typography: {
     color: "#ADEFD1FF",
-    padding: theme.spacing(2),
+    padding: theme.spacing(1),
     fontFamily: "Averia",
   },
   projectsLinkButton: {
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   chip: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(1),
     margin: theme.spacing(1),
     fontFamily: "Bebas+Neue",
     fontSize: 15,
@@ -65,6 +65,17 @@ export default function SmallProjects(props: SmallProjectsProps) {
 
   return (
     <>
+      <Grid
+        justify="center"
+        style={{ marginTop: 20, marginBottom: 8 }}
+        container
+        item
+        xs={12}
+      >
+        <Typography className={styles.typography} variant="h4">
+          Några av mina projekt
+        </Typography>
+      </Grid>
       {projects.map((project: Project, index: number) => {
         return index < 2 ? (
           <Grid

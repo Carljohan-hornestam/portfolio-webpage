@@ -30,7 +30,6 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: "#00203FFF",
     border: "1px solid black",
     width: 150,
-    marginBottom: theme.spacing(2),
     "&:hover": {
       background: "transparent",
       border: "1px solid #f50057",
@@ -109,15 +108,20 @@ const SmallAbout: React.FC = () => {
         <Fade bottom>
           {infoState === "info" ? (
             <Typography className={styles.typography} variant="h5">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Praesentium distinctio similique, magnam ipsa enim debitis
-              dignissimos ea magni odio ullam.
+              Jag heter Carl-Johan Hornestam och är 25 år gammal. Jag är en nyexaminerad
+              Javautvecklare med en mängd olika tekniker i bagaget. Bland annat
+              har jag goda kunskaper i: React, Vue 2 & 3, Java, Javascript med
+              mera. Är du/ni intresserade av mer information om mig, klicka
+              gärna på knappen nedanför så kan ni lära känna mig ännu bättre!
             </Typography>
           ) : (
             <Typography className={styles.typography} variant="h5">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Praesentium distinctio similique, magnam ipsa enim debitis
-              dignissimos ea magni odio ullam.
+              Jag har läst utbildningen Javautvecklare på yrkeshögskolan EC
+              Utbildning i Malmö. Där har jag från grunden fått lära mig minst
+              ett tiotal olika programmeringsspråk/tekniker. Några av dessa är
+              Java, HTML & CSS, Javascript, Vue 2 & 3, React, Node, Spring med
+              mera. Ett objektorienterat sätt att programmera på har legat i
+              fokus under de två åren.
             </Typography>
           )}
         </Fade>
@@ -127,7 +131,7 @@ const SmallAbout: React.FC = () => {
           className={styles.infoLinkButton}
           onClick={() => history.push("/about")}
         >
-          <Typography variant="h6">Mer info</Typography>
+          <Typography variant="h6">Lär känna mig</Typography>
         </IconButton>
       </Grid>
     </>

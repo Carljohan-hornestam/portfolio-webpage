@@ -15,12 +15,12 @@ const useStyles = makeStyles((theme) => ({
   },
   typography: {
     color: "#ADEFD1FF",
-    padding: theme.spacing(2),
+    padding: theme.spacing(1),
     fontFamily: "Averia",
     textAlign: "center",
   },
   chip: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(1),
     margin: theme.spacing(1),
     fontFamily: "Bebas+Neue",
     fontSize: 15,
@@ -48,7 +48,7 @@ export default function Projects(props: ProjectsProps) {
           <Grid
             alignContent="center"
             key={index}
-            style={{ padding: 20 }}
+            // style={{ padding: 20 }}
             container
             item
             xs={12}
