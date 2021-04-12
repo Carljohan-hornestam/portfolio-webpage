@@ -78,23 +78,13 @@ export default function About({ info }: AboutProps) {
                   Info om mig
                 </Typography>
                 <Typography className={styles.typography} variant="subtitle1">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                  velit labore, totam quos accusamus autem ab dignissimos
-                  exercitationem unde corrupti assumenda quo mollitia aut
-                  veritatis iure sit neque quasi ipsum excepturi ipsam
-                  asperiores odio! Eaque voluptatibus perferendis aut corrupti
-                  possimus illo cum vero minima quasi dolores. Totam consequatur
-                  soluta fugiat neque. Commodi, modi iste incidunt quam neque
-                  asperiores aperiam explicabo laboriosam nihil unde ad cum
-                  mollitia labore maiores ipsa vitae! Deleniti aut quam voluptas
-                  odit repellat laudantium architecto minima, harum nobis
-                  aperiam nihil commodi est mollitia, perspiciatis eveniet
-                  quisquam aspernatur nesciunt corporis? Corporis perferendis
-                  cum, molestias esse earum veniam. Accusamus.
+                  {info.description}
                 </Typography>
                 <Grid container item xs={12} justify="flex-end">
                   <Grid item xs={12}>
-                    <Typography className={styles.typography} variant="h5">Mina kunskaper</Typography>
+                    <Typography className={styles.typography} variant="h5">
+                      Mina kunskaper
+                    </Typography>
                   </Grid>
                   <Grid item xs={12}>
                     {languages.map((language: Language, index: number) => {
