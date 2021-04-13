@@ -90,10 +90,11 @@ export default function RightProject(props: RightProjectProps) {
         ></img>
       </Grid>
       <Dialog
+        maxWidth="lg"
         open={rightImageModalOpen}
         onClose={() => setRightImageModalOpen(false)}
       >
-        <DialogContent>
+        <DialogContent style={{ minHeight: 850, minWidth: 950 }}>
           <RightImageModal imageSrc={props.imageSrc} />
         </DialogContent>
       </Dialog>

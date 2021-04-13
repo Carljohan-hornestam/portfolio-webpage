@@ -9,7 +9,7 @@ console.log('leftimagemodal');
 
   return (
     <Grid container item xs={12}>
-      <img alt="" src={`${props.imageSrc}`}></img>
+      <img alt="" src={`${props.imageSrc}`} width={1200} height={850}></img>
     </Grid>
   )
 }

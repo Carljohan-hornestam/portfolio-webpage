@@ -1,4 +1,5 @@
 import sgfm from "../images/SGFM.png";
+import sgfm2 from "../images/SGFM2.png"
 import example from "../images/exampleImage.jpg"
 
 export const projects1 = [
@@ -25,7 +26,7 @@ export const projects1 = [
      Servern och klienten kommunicerar via Socket.io. Servern är skriven i Java och frontenden i Vue 3. Applikationen använder Neo4j som databas. 
      Samma spelregler som första utgåvan av spelet.`,
     githubLink: "https://github.com/BitLord69/SGFM2",
-    imageSrc: sgfm,
+    imageSrc: sgfm2,
     writtenIn: ["Java", "Javascript", "Vue 3", "Node", "Neo4j"],
   },
   {

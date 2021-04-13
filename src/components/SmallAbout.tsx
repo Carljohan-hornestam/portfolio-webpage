@@ -109,7 +109,7 @@ const SmallAbout: React.FC = () => {
           {infoState === "info" ? (
             <Typography className={styles.typography} variant="h5">
               Jag heter Carl-Johan Hornestam och är 25 år gammal. Jag är en nyexaminerad
-              Javautvecklare med en mängd olika tekniker i bagaget. Bland annat
+              Fullstack-utvecklare med en mängd olika tekniker i bagaget. Bland annat
               har jag goda kunskaper i: React, Vue 2 & 3, Java, Javascript med
               mera. Är du/ni intresserade av mer information om mig, klicka
               gärna på knappen nedanför så kan ni lära känna mig ännu bättre!

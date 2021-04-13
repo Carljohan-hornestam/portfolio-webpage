@@ -90,10 +90,11 @@ export default function LeftProject(props: LeftProjectProps) {
         </Grid>
       </Grid>
       <Dialog
+        maxWidth="lg"
         open={leftImageModalOpen}
         onClose={() => setLeftImageModalOpen(false)}
       >
-        <DialogContent>
+        <DialogContent style={{ minHeight: 850, minWidth: 950 }}>
           <LeftImageModal imageSrc={props.imageSrc} />
         </DialogContent>
       </Dialog>
