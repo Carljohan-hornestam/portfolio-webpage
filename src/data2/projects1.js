@@ -1,5 +1,6 @@
 import sgfm from "../images/SGFM.png";
 import sgfm2 from "../images/SGFM2.png"
+import movieknights from "../images/movieknights.png"
 import example from "../images/exampleImage.jpg"
 
 export const projects1 = [
@@ -34,7 +35,7 @@ export const projects1 = [
     description: `Movieknights är en webbapp där backenden är skriven i Java och Spring, och frontenden i Vue 3.
        Här kan man söka bland flera hundratusentals filmer i vår databas och boka filmkvällar med andra Google-användare direkt i sin Google-kalender.`,
     githubLink: "https://github.com/BitLord69/movieknights",
-    imageSrc: sgfm,
+    imageSrc: movieknights,
     writtenIn: ["Java", "JavaScript", "Vue 3", "Spring", "Neo4j"],
   },
   {

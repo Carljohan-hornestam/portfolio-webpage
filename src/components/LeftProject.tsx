@@ -25,6 +25,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Bebas+Neue",
     fontSize: 15,
   },
+  dialog : {
+  }
 }));
 
 interface LeftProjectProps {
@@ -90,6 +92,8 @@ export default function LeftProject(props: LeftProjectProps) {
         </Grid>
       </Grid>
       <Dialog
+        className={styles.dialog}
+        color="secondary"
         maxWidth="lg"
         open={leftImageModalOpen}
         onClose={() => setLeftImageModalOpen(false)}

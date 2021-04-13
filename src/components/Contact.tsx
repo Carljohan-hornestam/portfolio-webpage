@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
   const styles = useStyles();
 
   return (
-    <div>KONTAKTA PÅ MIG</div>
+    <div>Kontakt</div>
   );
 }
 
