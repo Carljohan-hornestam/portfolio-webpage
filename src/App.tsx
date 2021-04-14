@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   smallProjectsContainer: {
     // backgroundImage: `url(${bgImage})`,
     background: "#00203FFF",
-    height: 800,
+    height: 850,
   },
 }));
 

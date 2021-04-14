@@ -1,15 +1,7 @@
-import React from "react";
 import {
   makeStyles,
   Grid,
-  Typography,
-  Tooltip,
-  IconButton,
-  Chip,
-  Dialog,
-  DialogContent,
 } from "@material-ui/core";
-import GitHubIcon from "@material-ui/icons/GitHub";
 import LeftProject from "./LeftProject";
 import RightProject from "./RightProject";
 
@@ -41,14 +33,17 @@ interface Project {
   githubLink: string;
   imageSrc: string;
   writtenIn: [];
+  images: [];
 }
 
 export default function Projects(props: ProjectsProps) {
   const styles = useStyles();
-
+  
   return (
     <Grid container className={styles.projectsContainer}>
       {props.projects.map((project: Project, index: number) => {
+        console.log('project.images:', project.images);
+        
         return (
           <Grid
             alignContent="center"
@@ -64,6 +59,7 @@ export default function Projects(props: ProjectsProps) {
                 description={project.description}
                 githubLink={project.githubLink}
                 imageSrc={project.imageSrc}
+                images={project.images}
                 writtenIn={project.writtenIn}
               />
             ) : (
@@ -72,6 +68,7 @@ export default function Projects(props: ProjectsProps) {
                 description={project.description}
                 githubLink={project.githubLink}
                 imageSrc={project.imageSrc}
+                images={project.images}
                 writtenIn={project.writtenIn}
               />
             )}

@@ -10,7 +10,6 @@ import {
 import GitHubIcon from "@material-ui/icons/GitHub";
 import Fade from "react-reveal";
 import Rotate from "react-reveal";
-import exampleImage from "../images/exampleImage.jpg";
 
 const useStyles = makeStyles((theme) => ({
   contentContainer: {
@@ -20,8 +19,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   projectImage: {
-    boxShadow: "0px 0px 25px -2px #f50057",
-    borderRadius: "30px",
+    // boxShadow: "0px 0px 25px -2px #f50057",
+    // borderRadius: "30px",
   },
   typography: {
     color: "#ADEFD1FF",
@@ -53,7 +52,7 @@ interface SmallProjectsProps {
 
 interface Project {
   name: string;
-  imageLink: string;
+  imageSrc: string;
   description: string;
   githubLink: string;
   writtenIn: [];
@@ -93,9 +92,9 @@ export default function SmallProjects(props: SmallProjectsProps) {
                     <img
                       className={styles.projectImage}
                       alt=""
-                      height={250}
-                      width={420}
-                      src={`${exampleImage}`}
+                      height={300}
+                      width={450}
+                      src={`${project.imageSrc}`}
                     ></img>
                   </Grid>
                 </Rotate>
@@ -191,9 +190,9 @@ export default function SmallProjects(props: SmallProjectsProps) {
                     <img
                       className={styles.projectImage}
                       alt=""
-                      height={250}
-                      width={420}
-                      src={`${exampleImage}`}
+                      height={300}
+                      width={450}
+                      src={`${project.imageSrc}`}
                     ></img>
                   </Grid>
                 </Rotate>

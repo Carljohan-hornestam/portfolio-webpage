@@ -25,8 +25,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Bebas+Neue",
     fontSize: 15,
   },
-  dialog : {
-  }
+  dialog: {},
 }));
 
 interface LeftProjectProps {
@@ -35,6 +34,7 @@ interface LeftProjectProps {
   githubLink: string;
   imageSrc: string;
   writtenIn: [];
+  images: [];
 }
 
 export default function LeftProject(props: LeftProjectProps) {
@@ -45,15 +45,18 @@ export default function LeftProject(props: LeftProjectProps) {
   return (
     <>
       <Grid item xs={3}>
+        <Tooltip title="Klicka på bilden för fler och större bilder">
         <img
+          style={{cursor: "pointer"}}
           onClick={() => setLeftImageModalOpen(true)}
           alt=""
           height={300}
           width={450}
           src={`${props.imageSrc}`}
         ></img>
+        </Tooltip>
       </Grid>
-      <Grid container item xs={9}>
+      <Grid alignContent="center" container item xs={9}>
         <Grid item xs={12}>
           <Typography className={styles.typography} variant="h5">
             {props.projectName}
@@ -93,13 +96,12 @@ export default function LeftProject(props: LeftProjectProps) {
       </Grid>
       <Dialog
         className={styles.dialog}
-        color="secondary"
         maxWidth="lg"
         open={leftImageModalOpen}
         onClose={() => setLeftImageModalOpen(false)}
       >
-        <DialogContent style={{ minHeight: 850, minWidth: 950 }}>
-          <LeftImageModal imageSrc={props.imageSrc} />
+        <DialogContent>
+          <LeftImageModal imageSrc={props.imageSrc} images={props.images} />
         </DialogContent>
       </Dialog>
     </>

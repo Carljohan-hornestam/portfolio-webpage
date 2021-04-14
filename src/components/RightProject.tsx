@@ -33,6 +33,7 @@ interface RightProjectProps {
   githubLink: string;
   imageSrc: string;
   writtenIn: [];
+  images: [];
 }
 
 export default function RightProject(props: RightProjectProps) {
@@ -41,9 +42,13 @@ export default function RightProject(props: RightProjectProps) {
     false
   );
 
+  function checkImageString(): boolean {
+    return props.imageSrc.includes('marvelissimo');
+  }
+
   return (
     <>
-      <Grid container item xs={9}>
+      <Grid alignContent="center" container item xs={9}>
         <Grid item xs={12}>
           <Typography className={styles.typography} variant="h5">
             {props.projectName}
@@ -80,22 +85,25 @@ export default function RightProject(props: RightProjectProps) {
         </Grid>
       </Grid>
 
-      <Grid item xs={3}>
+      <Grid justify="flex-end" container item xs={3}>
+        <Tooltip title="Klicka på bilden för fler och större bilder">
         <img
+          style={{cursor: "pointer"}}
           onClick={() => setRightImageModalOpen(true)}
           alt=""
           height={300}
           width={450}
           src={`${props.imageSrc}`}
         ></img>
+        </Tooltip>
       </Grid>
       <Dialog
         maxWidth="lg"
         open={rightImageModalOpen}
         onClose={() => setRightImageModalOpen(false)}
       >
-        <DialogContent style={{ minHeight: 850, minWidth: 950 }}>
-          <RightImageModal imageSrc={props.imageSrc} />
+        <DialogContent>
+          <RightImageModal imageSrc={props.imageSrc} images={props.images}/>
         </DialogContent>
       </Dialog>
     </>
