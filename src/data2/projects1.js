@@ -1,9 +1,9 @@
 import sgfm1_bild1 from "../images/sgfm1_bild1.png";
 import sgfm1_bild2 from "../images/sgfm1_bild2.png";
-import sgfm2 from "../images/SGFM2.png"
-import movieknights from "../images/movieknights.png"
-import movieknights2 from "../images/movieknights2.png"
-import marvelissimo from "../images/marvelissimo.png";
+import sgfm2_bild1 from "../images/SGFM2.png";
+import sgfm2_bild2 from "../images/SGFM2_bild2.png";
+import movieknights from "../images/movieknights.png";
+import movieknights2 from "../images/movieknights2.png";
 import supercalendar from "../images/supercalendar.png";
 import supercalendar2 from "../images/supercalendar2.png";
 
@@ -18,23 +18,14 @@ export const projects1 = [
     images: [sgfm1_bild1, sgfm1_bild2],
     writtenIn: ["Java"],
   },
-  // {
-  //   name: "Marvelissimo",
-  //   description:
-  //     "Marvelissimo är en Android applikation som är skriven i Kotlin. Appen hämtar karaktärer och serier från Marvels API och presenterar dessa i en snygg lista. Man kan även favoritmarkera och skicka favoriter till andra användare.",
-  //   githubLink: "https://github.com/BitLord69/Marvelissimo",
-  //   imageSrc: marvelissimo,
-  //   images: [marvelissimo],
-  //   writtenIn: ["Kotlin", "Firebase"],
-  // },
   {
     name: "Super Galaxy Face Melter 2",
     description: `Det här är den andra utgåvan av Super Galaxy Face Melter serien. Den här gången är det ett komplett onlinespel med både server och klient.
      Servern och klienten kommunicerar via Socket.io. Servern är skriven i Java och frontenden i Vue 3. Applikationen använder Neo4j som databas. 
      Samma spelregler som första utgåvan av spelet.`,
     githubLink: "https://github.com/BitLord69/SGFM2",
-    imageSrc: sgfm2,
-    images: [sgfm2],
+    imageSrc: sgfm2_bild1,
+    images: [sgfm2_bild1, sgfm2_bild2],
     writtenIn: ["Java", "Javascript", "Vue 3", "Node", "Neo4j"],
   },
   {

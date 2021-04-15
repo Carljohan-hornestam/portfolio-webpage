@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   activeRoute: {
     // color: "#ffff",
+    color: "#f50057",
     textDecoration: "underline",
     transition: "0.3s ease-in-out",
   },

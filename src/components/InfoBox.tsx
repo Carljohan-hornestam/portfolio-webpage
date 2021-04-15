@@ -8,9 +8,6 @@ import {
   Tooltip,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import EmailIcon from "@material-ui/icons/Email";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -71,23 +68,6 @@ export default function InfoBox({ info }: InfoProps) {
             <GitHubIcon fontSize="large" />
           </IconButton>
         </Tooltip>
-        <IconButton
-          color="secondary"
-          href={`${info.githubLink}`}
-          target="_blank"
-        >
-          <FacebookIcon fontSize="large" />
-        </IconButton>
-        <IconButton
-          color="secondary"
-          href={`mailto:${info.email}`}
-          target="_blank"
-        >
-          <EmailIcon fontSize="large" />
-        </IconButton>
-        <IconButton color="secondary">
-          <LinkedInIcon fontSize="large" />
-        </IconButton>
       </Grid>
     </>
   );

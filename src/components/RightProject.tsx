@@ -42,10 +42,6 @@ export default function RightProject(props: RightProjectProps) {
     false
   );
 
-  function checkImageString(): boolean {
-    return props.imageSrc.includes('marvelissimo');
-  }
-
   return (
     <>
       <Grid alignContent="center" container item xs={9}>
