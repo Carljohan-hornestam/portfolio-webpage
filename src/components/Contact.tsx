@@ -49,7 +49,7 @@ const Contact: React.FC = () => {
         item
         xs={12}
         justify="center"
-        style={{ marginBottom: 550 }}
+        style={{ marginBottom: 350 }}
       >
         <Chip
           className={styles.chip}
