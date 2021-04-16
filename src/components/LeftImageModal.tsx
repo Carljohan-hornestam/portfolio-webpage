@@ -12,7 +12,7 @@ export default function LeftImageModal(props: LeftImageModalProps) {
     <Grid container item xs={12}>
       <Carousel showThumbs={false} showIndicators>
         {props.images.map((index: number) => {
-          return <img alt="" key={index} src={`${index}`}></img>;
+          return <img alt="" height={650} key={index} src={`${index}`}></img>;
         })}
       </Carousel>
     </Grid>
