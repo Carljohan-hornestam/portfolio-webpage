@@ -44,19 +44,19 @@ export default function LeftProject(props: LeftProjectProps) {
   );
   return (
     <>
-      <Grid item xs={3}>
+      <Grid item xs={4}>
         <Tooltip title="Klicka på bilden för fler och större bilder">
         <img
           style={{cursor: "pointer"}}
           onClick={() => setLeftImageModalOpen(true)}
           alt=""
           height={300}
-          width={450}
+          width={550}
           src={`${props.imageSrc}`}
         ></img>
         </Tooltip>
       </Grid>
-      <Grid alignContent="center" container item xs={9}>
+      <Grid alignContent="center" container item xs={8}>
         <Grid item xs={12}>
           <Typography className={styles.typography} variant="h5">
             {props.projectName}

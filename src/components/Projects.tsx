@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   typography: {
     color: "#ADEFD1FF",
     padding: theme.spacing(1),
-    fontFamily: "Averia",
+    fontFamily: "Bebas+Neue",
     textAlign: "center",
   },
   chip: {

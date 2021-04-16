@@ -44,7 +44,7 @@ export default function RightProject(props: RightProjectProps) {
 
   return (
     <>
-      <Grid alignContent="center" container item xs={9}>
+      <Grid alignContent="center" container item xs={8}>
         <Grid item xs={12}>
           <Typography className={styles.typography} variant="h5">
             {props.projectName}
@@ -81,14 +81,14 @@ export default function RightProject(props: RightProjectProps) {
         </Grid>
       </Grid>
 
-      <Grid justify="flex-end" container item xs={3}>
+      <Grid justify="flex-end" container item xs={4}>
         <Tooltip title="Klicka på bilden för fler och större bilder">
         <img
           style={{cursor: "pointer"}}
           onClick={() => setRightImageModalOpen(true)}
           alt=""
           height={300}
-          width={450}
+          width={550}
           src={`${props.imageSrc}`}
         ></img>
         </Tooltip>

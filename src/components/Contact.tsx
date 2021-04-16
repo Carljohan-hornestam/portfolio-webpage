@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
   typography: {
     color: "#ADEFD1FF",
+    fontFamily: "Averia"
   },
   phoneChip: {
     padding: theme.spacing(3),
