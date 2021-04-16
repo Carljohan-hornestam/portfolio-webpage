@@ -5,11 +5,10 @@ import {
   Chip,
   // IconButton,
 } from "@material-ui/core";
-// import FacebookIcon from "@material-ui/icons/Facebook";
 import EmailIcon from "@material-ui/icons/Email";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import PhoneIcon from "@material-ui/icons/Phone";
-// import { FaDiscord } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
 import Fade from "react-reveal";
 
 const useStyles = makeStyles((theme) => ({
@@ -21,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#ADEFD1FF",
     fontFamily: "Averia"
   },
-  phoneChip: {
+  noLinkChip: {
     padding: theme.spacing(3),
     margin: theme.spacing(1),
     fontSize: 20,
@@ -63,7 +62,7 @@ const Contact: React.FC = () => {
       >
         <Fade>
         <Chip
-          className={styles.phoneChip}
+          className={styles.noLinkChip}
           color="secondary"
           label="+46768807993"
           icon={<PhoneIcon fontSize="large" />}
@@ -92,19 +91,13 @@ const Contact: React.FC = () => {
             icon={<LinkedInIcon fontSize="large" />}
           />
         </a>
-        </Fade>
-        {/* <Chip
-          className={styles.chip}
-          color="secondary"
-          label="Facebook"
-          icon={<FacebookIcon fontSize="large" />}
-        />
         <Chip
-          className={styles.chip}
+          className={styles.noLinkChip}
           color="secondary"
-          label="Discord"
+          label="calle#9184"
           icon={<FaDiscord size="1.4em" />}
-        /> */}
+          />
+          </Fade>
       </Grid>
     </Grid>
   );
