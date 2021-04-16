@@ -4,6 +4,7 @@ import {
 } from "@material-ui/core";
 import LeftProject from "./LeftProject";
 import RightProject from "./RightProject";
+import Fade from "react-reveal";
 
 const useStyles = makeStyles((theme) => ({
   projectsContainer: {
@@ -40,6 +41,7 @@ export default function Projects(props: ProjectsProps) {
   const styles = useStyles();
   
   return (
+    <Fade>
     <Grid container className={styles.projectsContainer}>
       {props.projects.map((project: Project, index: number) => {
         console.log('project.images:', project.images);
@@ -54,6 +56,7 @@ export default function Projects(props: ProjectsProps) {
             xs={12}
           >
             {index % 2 === 0 ? (
+              
               <LeftProject
                 projectName={project.name}
                 description={project.description}
@@ -76,5 +79,6 @@ export default function Projects(props: ProjectsProps) {
         );
       })}
     </Grid>
+    </Fade>
   );
 }

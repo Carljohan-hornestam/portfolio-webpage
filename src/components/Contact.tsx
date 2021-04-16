@@ -10,6 +10,7 @@ import EmailIcon from "@material-ui/icons/Email";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import PhoneIcon from "@material-ui/icons/Phone";
 // import { FaDiscord } from "react-icons/fa";
+import Fade from "react-reveal";
 
 const useStyles = makeStyles((theme) => ({
   contactContainer: {
@@ -51,6 +52,7 @@ const Contact: React.FC = () => {
           </Typography>
         </Grid>
       </Grid>
+      
       <Grid
         container
         item
@@ -58,6 +60,7 @@ const Contact: React.FC = () => {
         justify="center"
         style={{ marginBottom: 350 }}
       >
+        <Fade>
         <Chip
           className={styles.phoneChip}
           color="secondary"
@@ -88,6 +91,7 @@ const Contact: React.FC = () => {
             icon={<LinkedInIcon fontSize="large" />}
           />
         </a>
+        </Fade>
         {/* <Chip
           className={styles.chip}
           color="secondary"
