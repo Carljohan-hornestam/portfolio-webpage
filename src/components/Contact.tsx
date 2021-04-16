@@ -3,13 +3,13 @@ import {
   Grid,
   Typography,
   Chip,
-  IconButton,
+  // IconButton,
 } from "@material-ui/core";
-import FacebookIcon from "@material-ui/icons/Facebook";
+// import FacebookIcon from "@material-ui/icons/Facebook";
 import EmailIcon from "@material-ui/icons/Email";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import PhoneIcon from "@material-ui/icons/Phone";
-import { FaDiscord } from "react-icons/fa";
+// import { FaDiscord } from "react-icons/fa";
 
 const useStyles = makeStyles((theme) => ({
   contactContainer: {
@@ -19,11 +19,18 @@ const useStyles = makeStyles((theme) => ({
   typography: {
     color: "#ADEFD1FF",
   },
+  phoneChip: {
+    padding: theme.spacing(3),
+    margin: theme.spacing(1),
+    fontSize: 20,
+    color: "#00203FFF",
+  },
   chip: {
     padding: theme.spacing(3),
     margin: theme.spacing(1),
     fontSize: 20,
     color: "#00203FFF",
+    cursor: "pointer"
   },
 }));
 
@@ -52,28 +59,36 @@ const Contact: React.FC = () => {
         style={{ marginBottom: 350 }}
       >
         <Chip
-          className={styles.chip}
+          className={styles.phoneChip}
           color="secondary"
           label="+46768807993"
           icon={<PhoneIcon fontSize="large" />}
         />
-        <Chip
-          className={styles.chip}
-          color="secondary"
-          label="carljohan.hornestam@gmail.com"
-          icon={
-            <IconButton href="mailto:carljohan.hornestam@gmail.com" target="_blank">
-              <EmailIcon fontSize="large" />
-            </IconButton>
-          }
-        />
-        <Chip
-          className={styles.chip}
-          color="secondary"
-          label="LinkedIn"
-          icon={<LinkedInIcon fontSize="large" />}
-        />
-        <Chip
+        <a
+          style={{ textDecoration: "none", height: 63 }}
+          href="mailto:carljohan.hornestam95@gmail.com"
+        >
+          <Chip
+            className={styles.chip}
+            color="secondary"
+            label="carljohan.hornestam95@gmail.com"
+            icon={<EmailIcon fontSize="large" />}
+          />
+        </a>
+        <a
+          style={{ textDecoration: "none", height: 63 }}
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/carl-johan-hornestam-2b2b4020b/"
+          target="_blank"
+        >
+          <Chip
+            className={styles.chip}
+            color="secondary"
+            label="LinkedIn"
+            icon={<LinkedInIcon fontSize="large" />}
+          />
+        </a>
+        {/* <Chip
           className={styles.chip}
           color="secondary"
           label="Facebook"
@@ -84,7 +99,7 @@ const Contact: React.FC = () => {
           color="secondary"
           label="Discord"
           icon={<FaDiscord size="1.4em" />}
-        />
+        /> */}
       </Grid>
     </Grid>
   );

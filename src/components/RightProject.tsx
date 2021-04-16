@@ -99,7 +99,7 @@ export default function RightProject(props: RightProjectProps) {
         onClose={() => setRightImageModalOpen(false)}
       >
         <DialogContent>
-          <RightImageModal imageSrc={props.imageSrc} images={props.images}/>
+          <RightImageModal images={props.images}/>
         </DialogContent>
       </Dialog>
     </>

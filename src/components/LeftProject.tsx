@@ -101,7 +101,7 @@ export default function LeftProject(props: LeftProjectProps) {
         onClose={() => setLeftImageModalOpen(false)}
       >
         <DialogContent>
-          <LeftImageModal imageSrc={props.imageSrc} images={props.images} />
+          <LeftImageModal images={props.images} />
         </DialogContent>
       </Dialog>
     </>
