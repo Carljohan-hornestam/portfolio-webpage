@@ -3,7 +3,6 @@ import {
   Grid,
   Typography,
   Chip,
-  // IconButton,
 } from "@material-ui/core";
 import EmailIcon from "@material-ui/icons/Email";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
